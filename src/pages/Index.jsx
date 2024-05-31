@@ -1,18 +1,29 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Box, Heading, Text, Link } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.md" p={4}>
+      {/* Header Section */}
+      <Box as="header" textAlign="center" my={8}>
+        <Heading as="h1" size="2xl">John Doe</Heading>
+        <Text fontSize="lg" color="gray.600">Web Developer & Designer</Text>
+      </Box>
+
+      {/* About Section */}
+      <Box as="section" my={8}>
+        <Heading as="h2" size="xl" mb={4}>About Me</Heading>
+        <Text fontSize="md" color="gray.700">
+          Hello! I'm John, a passionate web developer with a knack for creating beautiful and functional websites. With a background in design and a love for coding, I strive to build web experiences that are both visually appealing and highly performant.
+        </Text>
+      </Box>
+
+      {/* Contact Section */}
+      <Box as="section" my={8}>
+        <Heading as="h2" size="xl" mb={4}>Contact</Heading>
+        <Text fontSize="md" color="gray.700">
+          Feel free to reach out to me at <Link href="mailto:john.doe@example.com" color="teal.500">john.doe@example.com</Link>
+        </Text>
+      </Box>
     </Container>
   );
 };
